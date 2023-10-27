@@ -1,5 +1,6 @@
 import Experience from "@/components/Experience";
-import SwitchTheme from "@/components/SwitchTheme";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const experienceData = [
 	{
@@ -64,27 +65,7 @@ function page() {
 	return (
 		<div>
 			{/* Header */}
-			<header className="navbar bg-base-200">
-				<div className="flex-1">
-					<a className="mx-3 font-bold capitalize cursor-pointer">
-						👨 Jun Santilla
-					</a>
-				</div>
-				<div className="flex-none">
-					<ul className="menu menu-horizontal px-1">
-						<li>
-							<a
-								href="/eduardoSantillaJr.pdf"
-								className="font-semibold"
-								download
-							>
-								⭐ Download Resume
-							</a>
-						</li>
-					</ul>
-					<SwitchTheme />
-				</div>
-			</header>
+			<Header />
 
 			<div className="divider" />
 
@@ -172,43 +153,7 @@ function page() {
 			<div className="divider" />
 
 			{/* Footer */}
-			<footer className="flex justify-center md:justify-between flex-col md:flex-row items-center p-6 gap-2 bg-base-200 ">
-				<div className="font-bold">
-					<p>Copyright © 2023 - All rights reserved.</p>
-				</div>
-				<div>
-					<p>
-						Built with{" "}
-						<a
-							href="https://nextjs.org/"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="underline font-bold"
-						>
-							Next.js
-						</a>
-						{" and "}
-						<a
-							href="https://daisyui.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="underline font-bold"
-						>
-							Daisy UI
-						</a>
-						, deployed with{" "}
-						<a
-							href="https://vercel.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="underline font-bold"
-						>
-							Vercel
-						</a>
-						.
-					</p>
-				</div>
-			</footer>
+			<Footer />
 		</div>
 	);
 }
