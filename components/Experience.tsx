@@ -1,11 +1,12 @@
 import React from "react";
+import { BiCalendar } from "react-icons/bi";
 
 interface ExperienceData {
 	date: string;
 	position: string;
 	employer: string;
 	description: string;
-	skills: string[];
+	skills: { name: string; link: string }[];
 }
 
 interface ExperienceProps {
@@ -16,13 +17,13 @@ function Experience({ experienceData }: ExperienceProps) {
 	return (
 		<>
 			{experienceData.map((experience, index) => (
-				<div className="max-w-7xl m-auto">
-					<div
-						key={index}
-						className="card card-side hover:bg-base-100 flex flex-col md:flex-row"
-					>
+				<div className="max-w-7xl m-auto" key={index}>
+					<div className="card card-side hover:bg-base-100 flex flex-col md:flex-row">
 						<div className="p-8 pr-0 pb-0 w-full md:w-2/6">
-							<p className="text-xl font-semibold text-primary">
+							<p className="flex text-xl font-semibold text-primary">
+								<div className="mr-2 mt-1">
+									<BiCalendar />
+								</div>
 								{experience.date}
 							</p>
 						</div>
@@ -40,12 +41,14 @@ function Experience({ experienceData }: ExperienceProps) {
 							</p>
 							<div className="mt-2 gap-2 flex flex-wrap">
 								{experience.skills.map((skill, skillIndex) => (
-									<button
+									<a
 										key={skillIndex}
-										className="btn btn-xs w-fit btn-secondary capitalize cursor-default"
+										href={skill.link}
+										target="_blank"
+										className="btn btn-xs w-fit btn-secondary capitalize"
 									>
-										{skill}
-									</button>
+										{skill.name}
+									</a>
 								))}
 							</div>
 						</div>

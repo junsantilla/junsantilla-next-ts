@@ -6,7 +6,7 @@ interface PortfolioItem {
 	description: string;
 	client: string;
 	role: string;
-	skills: string[];
+	skills: { name: string; link: string }[]; // Update the skills array type
 	image: string;
 	link: string;
 }
@@ -80,23 +80,32 @@ function Portfolio({ portfolioData }: PortfolioProps) {
 								</div>
 								<div className="p-0 w-full md:w-3/6">
 									<h2 className="text-xl font-semibold">
-										{item.title}
+										<a
+											href={item.link}
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											{item.title}
+										</a>
 									</h2>
-									{/* <p className="text-base-content/60">
+									<p className="text-base-content/60">
 										<strong>{item.client}</strong>
-									</p> */}
+									</p>
 									<p className="text-base-content/60">
 										{item.description}
 									</p>
 									<div className="mt-2 gap-2 flex flex-wrap">
 										{item.skills.map(
 											(skill, skillIndex) => (
-												<button
+												<a
 													key={skillIndex}
-													className="btn btn-xs w-fit btn-secondary capitalize cursor-default"
+													href={skill.link}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="btn btn-xs w-fit btn-secondary capitalize cursor-pointer"
 												>
-													{skill}
-												</button>
+													{skill.name}
+												</a>
 											)
 										)}
 									</div>
