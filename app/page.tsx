@@ -116,7 +116,7 @@ function page() {
 
 			{/* Contact Me */}
 			<section className="flex items-center text-center bg-base-100 h-auto md:min-h-[calc(100vh-170px)] m-auto p-10">
-				<div className="max-w-screen-lg m-auto">
+				<div className="max-w-screen-xl m-auto">
 					<h2 className="text-4xl md:text-5xl font-extrabold">
 						Web Solutions Await
 					</h2>
