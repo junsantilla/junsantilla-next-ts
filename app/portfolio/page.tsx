@@ -11,7 +11,21 @@ const portfolioData = [
 		client: "VKLLC",
 		role: "Web Developer",
 		skills: [
+			{ name: "React.js", link: "https://reactjs.org/" },
 			{ name: "Next.js", link: "https://nextjs.org/" },
+			{
+				name: "HTML",
+				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			},
+			{
+				name: "CSS",
+				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			},
+			{
+				name: "JavaScript",
+				link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+			},
+			{ name: "Tailwind", link: "https://tailwindcss.com/" },
 			{ name: "Firebase", link: "https://firebase.google.com/" },
 		],
 		image: "/images/portfolio/screely-1698414532878.png",
@@ -23,7 +37,17 @@ const portfolioData = [
 			"A dynamic sports website powered by WordPress, showcasing the latest sports news, scores, and commentary. Engage sports enthusiasts with responsive design and integrated multimedia content.",
 		client: "Powcast",
 		role: "Web Developer",
-		skills: [{ name: "WordPress", link: "https://wordpress.org/" }],
+		skills: [
+			{ name: "WordPress", link: "https://wordpress.org/" },
+			{
+				name: "HTML",
+				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			},
+			{
+				name: "CSS",
+				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			},
+		],
 		image: "/images/portfolio/screely-1698414315964.png",
 		link: "https://powcast-sports.com",
 	},
@@ -36,6 +60,14 @@ const portfolioData = [
 		skills: [
 			{ name: "WordPress", link: "https://wordpress.org/" },
 			{ name: "Elementor", link: "https://elementor.com/" },
+			{
+				name: "HTML",
+				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			},
+			{
+				name: "CSS",
+				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			},
 		],
 		image: "/images/portfolio/screely-1698414401924.png",
 		link: "https://college-home-economics.com",
@@ -49,6 +81,14 @@ const portfolioData = [
 		skills: [
 			{ name: "WordPress", link: "https://wordpress.org/" },
 			{ name: "Elementor", link: "https://elementor.com/" },
+			{
+				name: "HTML",
+				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			},
+			{
+				name: "CSS",
+				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			},
 		],
 		image: "/images/portfolio/screely-1698414432226.png",
 		link: "https://living-innovations.com",
@@ -64,6 +104,14 @@ const portfolioData = [
 			{
 				name: "Divi Theme",
 				link: "https://www.elegantthemes.com/gallery/divi/",
+			},
+			{
+				name: "HTML",
+				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			},
+			{
+				name: "CSS",
+				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
 			},
 		],
 		image: "/images/portfolio/screely-1698414462156.png",
