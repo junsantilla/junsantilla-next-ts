@@ -106,6 +106,9 @@ function page() {
 
 			{/* Experience */}
 			<section className="md:py-40 bg-base-200">
+				<h2 className="flex justify-center text-4xl md:text-5xl font-extrabold mb-7">
+					Work Experience
+				</h2>
 				<Experience experienceData={experienceData} />
 			</section>
 
@@ -114,9 +117,9 @@ function page() {
 			{/* Contact Me */}
 			<section className="flex items-center text-center bg-base-100 h-auto md:min-h-[calc(100vh-170px)] m-auto p-10">
 				<div className="max-w-screen-lg m-auto">
-					<h1 className="text-4xl md:text-7xl font-bold">
+					<h2 className="text-4xl md:text-5xl font-extrabold">
 						Web Solutions Await
-					</h1>
+					</h2>
 					<div className="text-base-content/60 font-title py-4 font-light md:text-lg xl:text-2xl">
 						<p>
 							Got a web problem that's as stubborn as a 404 error?{" "}
