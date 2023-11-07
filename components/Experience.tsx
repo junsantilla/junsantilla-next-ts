@@ -16,7 +16,7 @@ function Experience({ experienceData }: ExperienceProps) {
 	return (
 		<>
 			{experienceData.map((experience, index) => (
-				<div className="max-w-5xl m-auto">
+				<div className="max-w-7xl m-auto">
 					<div
 						key={index}
 						className="card card-side hover:bg-base-100 flex flex-col md:flex-row"
@@ -31,7 +31,9 @@ function Experience({ experienceData }: ExperienceProps) {
 								{experience.position}
 							</h2>
 							<p className="text-base-content/60">
-								<strong>{experience.employer}</strong>
+								<strong className="text-lg border-base-content/20 border-b-2">
+									{experience.employer}
+								</strong>
 							</p>
 							<p className="text-base-content/60">
 								{experience.description}

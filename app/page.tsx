@@ -4,10 +4,11 @@ import Header from "@/components/Header";
 
 const experienceData = [
 	{
-		date: "February 2023 - Present",
+		date: "February 2023 - September 2023",
 		position: "Software Engineer (Freelance)",
 		employer: "Victorious Korean Language Learning Center",
-		description: "Create school portal web app with Next.js and Firebase.",
+		description:
+			"Built a school portal web app for Victorious Korean Language Learning Center. This app, created with Next.js and Firebase, helps the school manage its operations more efficiently. I use technologies like React.js, Next.js, HTML, CSS, JavaScript, Tailwind, and Firebase to develop the platform.",
 		skills: [
 			"React.js",
 			"Next.js",
@@ -23,7 +24,7 @@ const experienceData = [
 		position: "Wordpress Developer (Freelance)",
 		employer: "College of Home Economics, UP Diliman",
 		description:
-			"Developed responsive WordPress websites with Elementor page builder.",
+			"Worked with the College of Home Economics, UP Diliman to develop responsive WordPress websites using the Elementor page builder. These websites make it easier for students and faculty to access information and updates.",
 		skills: ["WordPress", "Elementor", "HTML", "CSS"],
 	},
 	{
