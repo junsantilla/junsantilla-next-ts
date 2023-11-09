@@ -53,7 +53,7 @@ function page() {
 			<div className="divider" />
 
 			{/* Experience */}
-			<section className="md:py-40 bg-base-200">
+			<section className="md:py-40 py-10 bg-base-200">
 				<h2 className="flex justify-center text-4xl md:text-5xl font-extrabold mb-7">
 					Work Experience
 				</h2>

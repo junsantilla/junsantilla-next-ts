@@ -4,8 +4,8 @@ import SwitchTheme from "./SwitchTheme";
 
 function Header() {
 	return (
-		<header className="navbar bg-base-200">
-			<div className="flex-1">
+		<header className="navbar flex flex-col md:flex-row bg-base-200">
+			<div className="flex-1 pt-3 md:pt-0">
 				<Link
 					href="/"
 					className="mx-3 font-bold capitalize cursor-pointer"
@@ -15,11 +15,6 @@ function Header() {
 			</div>
 			<div className="flex-none">
 				<ul className="menu menu-horizontal px-1">
-					<li>
-						<Link href="/" className="font-semibold">
-							Home
-						</Link>
-					</li>
 					<li>
 						<Link href="/portfolio" className="font-semibold">
 							Portfolio
