@@ -2,6 +2,13 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Portfolio from "@/components/Portfolio";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Jun Santilla - Portfolio",
+	description:
+		"Explore Jun Santilla's portfolio of diverse web development projects. Freelance software and WordPress developer with 5+ years of experience, offering creativity and expertise. View my work and contact for customized web solutions.",
+};
 
 const portfolioData = [
 	{
