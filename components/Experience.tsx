@@ -105,10 +105,10 @@ function Experience() {
 	return (
 		<>
 			{experienceData.map((experience, index) => (
-				<div className="max-w-7xl m-auto" key={index}>
-					<div className="card card-side hover:bg-base-100 flex flex-col md:flex-row">
-						<div className="p-8 pr-0 pb-0 w-full md:w-2/6">
-							<p className="flex text-xl font-semibold text-primary">
+				<div className="max-w-7xl m-auto p-5" key={index}>
+					<div className="card card-side bg-base-100 md:bg-base-200 md:hover:bg-base-100 flex flex-col md:flex-row">
+						<div className="p-8 md:p-8  pr-0 pb-0 w-full md:w-2/6">
+							<p className="flex text-sm md:text-xl font-semibold text-primary">
 								<div className="mr-2 mt-1">
 									<BiCalendar />
 								</div>

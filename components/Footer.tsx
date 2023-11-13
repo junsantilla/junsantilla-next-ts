@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
 	return (
-		<footer className="flex justify-center md:justify-between flex-col md:flex-row items-center p-6 gap-2 bg-base-200 ">
+		<footer className="flex justify-start md:justify-between flex-col md:flex-row md:items-center p-6 gap-2 bg-base-200 text-xs  md:text-base">
 			<div className="font-bold">
 				<p>Copyright © 2023 - All rights reserved.</p>
 			</div>
