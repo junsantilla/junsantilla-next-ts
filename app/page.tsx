@@ -36,17 +36,27 @@ function page() {
 						<span className="border-base-content/20 border-b-2">
 							freelance software developer
 						</span>{" "}
-						and also pursuing personal projects to enhance my
-						front-end skills.
+						and also pursuing open source and personal projects to
+						enhance my skills.
 					</p>
-					<a
-						href="https://github.com/junsantilla"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="btn btn-secondary capitalize mt-3"
-					>
-						🚀 Github
-					</a>
+					<div className="flex gap-3">
+						<a
+							href="https://github.com/junsantilla"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn btn-secondary capitalize mt-3"
+						>
+							🚀 Github
+						</a>
+						<a
+							href="https://www.buymeacoffee.com/junsantilla"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn btn-secondary capitalize mt-3"
+						>
+							☕ Buy me a coffee
+						</a>
+					</div>
 				</div>
 			</section>
 
