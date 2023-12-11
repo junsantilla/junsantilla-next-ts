@@ -20,6 +20,17 @@ function page() {
 			{/* Hero */}
 			<section className="flex items-center bg-base-100 h-auto md:min-h-[calc(100vh-165px)] m-auto p-10">
 				<div>
+					<p className="mb-3 font-bold">
+						🟢 Current Hobby Project:{" "}
+						<a
+							href="https://cvalley.io/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline font-bold"
+						>
+							CValley.io
+						</a>
+					</p>
 					<p className="text-4xl md:text-7xl text-secondary font-extrabold">
 						Hi, I am
 					</p>
