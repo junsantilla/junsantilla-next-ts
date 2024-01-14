@@ -2,20 +2,13 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
-import Image from "@/public/images/og-image.jpeg";
+import Image from "next/image";
+import ogImage from "@/public/images/og-image.jpeg";
 
 export const metadata: Metadata = {
 	title: "Jun Santilla - WordPress and Freelance Software Developer",
 	description:
 		"Jun Santilla, a skilled freelance Software and WordPress development. With over 5 years of experience, I create robust web solutions tailored to your needs. Explore my portfolio and contact me for custom WordPress development services.",
-	openGraph: {
-		images: [
-			{
-				url: Image.src,
-				alt: "Jun Santilla, a skilled freelance Software and WordPress development.",
-			},
-		],
-	},
 };
 
 function page() {
@@ -28,6 +21,13 @@ function page() {
 
 			{/* Hero */}
 			<section className="flex items-center bg-base-100 h-auto md:min-h-[calc(100vh-165px)] m-auto p-10">
+				<Image
+					src={ogImage}
+					alt="Jun Santilla, a skilled freelance Software and WordPress development."
+					width={1200}
+					height={630}
+					className="hidden"
+				/>
 				<div>
 					<p className="mb-3 font-bold">
 						🟢 Current Hobby Project:{" "}
