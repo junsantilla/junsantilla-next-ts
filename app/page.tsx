@@ -2,11 +2,20 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
+import Image from "@/public/images/og-image.jpeg";
 
 export const metadata: Metadata = {
 	title: "Jun Santilla - WordPress and Freelance Software Developer",
 	description:
 		"Jun Santilla, a skilled freelance Software and WordPress development. With over 5 years of experience, I create robust web solutions tailored to your needs. Explore my portfolio and contact me for custom WordPress development services.",
+	openGraph: {
+		images: [
+			{
+				url: Image.src,
+				alt: "Jun Santilla, a skilled freelance Software and WordPress development.",
+			},
+		],
+	},
 };
 
 function page() {
