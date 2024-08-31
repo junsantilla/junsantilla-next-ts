@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import type { Metadata } from "next";
 import Image from "next/image";
 import ogImage from "@/public/images/og-image.jpeg";
+import Services from "@/components/Services";
 
 export const metadata: Metadata = {
 	title: "Jun Santilla - WordPress and Freelance Software Developer",
@@ -82,8 +83,18 @@ function page() {
 
 			<div className="divider" />
 
+			{/* Services */}
+			<section className="md:py-24 py-10 bg-base-100">
+				<h2 className="flex justify-center text-2xl md:text-5xl font-extrabold mb-7">
+					Services
+				</h2>
+				<Services />
+			</section>
+
+			<div className="divider" />
+
 			{/* Experience */}
-			<section className="md:py-40 py-10 bg-base-200">
+			<section className="md:py-24 py-10 bg-base-200">
 				<h2 className="flex justify-center text-2xl md:text-5xl font-extrabold mb-7">
 					Work Experience
 				</h2>
