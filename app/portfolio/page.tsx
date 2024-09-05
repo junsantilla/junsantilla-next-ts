@@ -36,7 +36,7 @@ const portfolioData = [
 			{ name: "Firebase", link: "https://firebase.google.com/" },
 		],
 		image: "/images/portfolio/screely-1698414532878.png",
-		link: "https://vkllc-school-portal.com",
+		link: "https://vkllc.vercel.app/",
 	},
 	{
 		title: "Powcast Sports",
@@ -56,7 +56,7 @@ const portfolioData = [
 			},
 		],
 		image: "/images/portfolio/screely-1698414315964.png",
-		link: "https://powcast-sports.com",
+		link: "https://powcastsports.com/",
 	},
 	{
 		title: "College of Home Economics",
@@ -77,7 +77,7 @@ const portfolioData = [
 			},
 		],
 		image: "/images/portfolio/screely-1698414401924.png",
-		link: "https://college-home-economics.com",
+		link: "https://che.upd.edu.ph/",
 	},
 	{
 		title: "Living Innovations",
@@ -98,7 +98,7 @@ const portfolioData = [
 			},
 		],
 		image: "/images/portfolio/screely-1698414432226.png",
-		link: "https://living-innovations.com",
+		link: "https://livinginnovations.ph/",
 	},
 	{
 		title: "Payroll Bureau Services",
@@ -122,7 +122,7 @@ const portfolioData = [
 			},
 		],
 		image: "/images/portfolio/screely-1698414462156.png",
-		link: "https://payroll-bureau-services.com",
+		link: "https://payrollbureaus.co.uk/",
 	},
 ];
 
