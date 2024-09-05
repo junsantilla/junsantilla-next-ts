@@ -22,7 +22,7 @@ function Header() {
 					</li>
 					<li>
 						<a
-							href="/eduardoSantillaJr.pdf"
+							href="/Eduardo-Jr-Santilla-Resume.pdf"
 							className="font-semibold"
 							download
 						>
