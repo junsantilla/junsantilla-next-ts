@@ -20,7 +20,7 @@ function Header() {
 							Portfolio
 						</Link>
 					</li>
-					<li>
+					{/* <li>
 						<a
 							href="/Eduardo-Jr-Santilla-Resume.pdf"
 							className="font-semibold"
@@ -28,7 +28,7 @@ function Header() {
 						>
 							Download Resume
 						</a>
-					</li>
+					</li> */}
 				</ul>
 				<SwitchTheme />
 			</div>
