@@ -23,11 +23,11 @@ const servicesData = [
 
 function Services() {
 	return (
-		<div className="max-w-7xl m-auto p-5">
+		<div className="max-w-screen-xl m-auto p-5">
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 				{servicesData.map((service, index) => (
 					<div
-						className="card bg-base-100 md:bg-base-200 md:hover:bg-base-100 p-6 text-center"
+						className="border rounded-md p-6 text-center"
 						key={index}
 					>
 						<div className="flex justify-center items-center text-primary text-3xl mb-4">

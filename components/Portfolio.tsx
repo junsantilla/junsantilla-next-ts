@@ -1,5 +1,19 @@
 "use client";
+
 import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import DotPattern from "./ui/dot-pattern";
+import { cn } from "@/lib/utils";
+import {
+	Card,
+	CardContent,
+	CardHeader,
+	CardTitle,
+	CardDescription,
+	CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface PortfolioItem {
 	title: string;
@@ -33,7 +47,17 @@ function Portfolio({ portfolioData }: PortfolioProps) {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-center min-h-[calc(100vh-236px)]">
+		<div className="flex flex-col items-center justify-center max-w-screen-lg mx-auto min-h-[calc(100vh-130px)]">
+			<DotPattern
+				width={20}
+				height={20}
+				cx={1}
+				cy={1}
+				cr={1}
+				className={cn(
+					"[mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)] "
+				)}
+			/>
 			{!isPasswordCorrect ? (
 				<div className="p-16 pt-5">
 					<h2>Please enter the password to view the portfolio:</h2>
@@ -43,75 +67,76 @@ function Portfolio({ portfolioData }: PortfolioProps) {
 						</p>
 					)}
 					<form>
-						<div className="flex mt-3">
-							<input
+						<div className="flex mt-3 gap-3">
+							<Input
 								type="password"
 								className="input input-bordered w-full max-w-xs focus:outline-none"
 								placeholder="Enter password"
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
 							/>
-							<button
+							<Button
 								className="btn btn-primary"
 								onClick={handlePasswordSubmit}
 							>
 								Submit
-							</button>
+							</Button>
 						</div>
 					</form>
 				</div>
 			) : (
-				<div className="p-10 flex flex-col gap-10">
-					<h1 className="flex justify-center text-4xl md:text-7xl font-extrabold mt-10">
+				<div className="p-10 flex flex-col gap-10 mb-20">
+					<h1 className="flex justify-center text-2xl md:text-5xl font-extrabold mt-10 mb-7">
 						Portfolio
 					</h1>
 					{portfolioData.map((item, index) => (
-						<div
-							className="max-w-7xl mx-auto p-16 bg-base-200"
+						<Card
 							key={index}
+							className="w-full border rounded-md background"
 						>
-							<div className="card md:flex-row gap-10">
-								<div className="w-full md:w-3/6">
-									<img
-										src={item.image}
-										alt={item.title}
-										className="w-full h-auto"
-									/>
-								</div>
-								<div className="p-0 w-full md:w-3/6">
-									<h2 className="text-xl font-semibold">
-										<a
-											href={item.link}
-											target="_blank"
-											rel="noopener noreferrer"
+							<CardHeader>
+								<CardTitle>
+									{/* <a
+										href={item.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="text-lg font-semibold hover:underline"
+									>
+										{item.title}
+									</a> */}
+									{item.title}
+								</CardTitle>
+								<CardDescription>
+									<strong>{item.client}</strong>
+								</CardDescription>
+							</CardHeader>
+
+							<CardContent>
+								<p>{item.description}</p>
+								{/* <img
+									src={item.image}
+									alt={item.title}
+									className="w-full h-auto mt-4 rounded-lg object-cover"
+								/> */}
+							</CardContent>
+
+							<CardFooter className="gap-2 mt-4">
+								{item.skills.map((skill, skillIndex) => (
+									<Link
+										href={skill.link}
+										target="_blank"
+										key={skillIndex}
+									>
+										<Button
+											className="btn-secondary capitalize"
+											size="sm"
 										>
-											{item.title}
-										</a>
-									</h2>
-									<p className="text-base-content/60">
-										<strong>{item.client}</strong>
-									</p>
-									<p className="text-base-content/60">
-										{item.description}
-									</p>
-									<div className="mt-2 gap-2 flex flex-wrap">
-										{item.skills.map(
-											(skill, skillIndex) => (
-												<a
-													key={skillIndex}
-													href={skill.link}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="btn btn-xs w-fit btn-secondary capitalize cursor-pointer"
-												>
-													{skill.name}
-												</a>
-											)
-										)}
-									</div>
-								</div>
-							</div>
-						</div>
+											{skill.name}
+										</Button>
+									</Link>
+								))}
+							</CardFooter>
+						</Card>
 					))}
 				</div>
 			)}

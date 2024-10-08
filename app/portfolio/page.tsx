@@ -12,6 +12,39 @@ export const metadata: Metadata = {
 
 const portfolioData = [
 	{
+		title: "Kravatar",
+		description:
+			"A web application that can generate unique avatars in seconds with our AI avatar generator. Perfect for gamers, streamers, and professionals looking to stand out online.",
+		client: "Personal Project",
+		role: "Web Developer",
+		skills: [
+			{ name: "React.js", link: "https://reactjs.org/" },
+			{ name: "Next.js", link: "https://nextjs.org/" },
+			{
+				name: "HTML",
+				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			},
+			{
+				name: "CSS",
+				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			},
+			{
+				name: "JavaScript",
+				link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+			},
+			{ name: "Tailwind", link: "https://tailwindcss.com/" },
+			{ name: "Firebase", link: "https://firebase.google.com/" },
+			{
+				name: "API",
+				link: "https://developer.mozilla.org/en-US/docs/Web/API",
+			},
+			{ name: "REST API", link: "https://restfulapi.net/" },
+			{ name: "OpenAI", link: "https://openai.com/" },
+		],
+		image: "/images/portfolio/screely-1698414532878.png",
+		link: "https://kravatar.com/",
+	},
+	{
 		title: "VKLLC School Portal",
 		description:
 			"A web application built with Next.js and Firebase that simplifies school management. Streamline student enrollment, payments, book inventory and more with real-time updates and user-friendly interfaces.",
@@ -130,9 +163,7 @@ function page() {
 	return (
 		<div>
 			<Header />
-			<div className="divider" />
 			<Portfolio portfolioData={portfolioData} />
-			<div className="divider" />
 			<Footer />
 		</div>
 	);

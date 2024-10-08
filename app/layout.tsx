@@ -1,5 +1,8 @@
 import "../styles/global.css";
 import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "@/components/theme-provider";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 export default function RootLayout({
 	children,
@@ -7,10 +10,17 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" data-theme="black">
+		<html lang="en" data-theme="black" className={GeistSans.className}>
 			<body>
-				{children}
-				<Analytics />
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					{children}
+					<Analytics />
+				</ThemeProvider>
 			</body>
 		</html>
 	);

@@ -1,5 +1,14 @@
 import React from "react";
-import { BiCalendar } from "react-icons/bi";
+import {
+	Card,
+	CardHeader,
+	CardTitle,
+	CardDescription,
+	CardContent,
+	CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const experienceData = [
 	{
@@ -101,49 +110,40 @@ const experienceData = [
 		],
 	},
 ];
+
 function Experience() {
 	return (
-		<>
-			{experienceData.map((experience, index) => (
-				<div className="max-w-7xl m-auto p-5" key={index}>
-					<div className="card card-side bg-base-100 md:bg-base-200 md:hover:bg-base-100 flex flex-col md:flex-row">
-						<div className="p-8 md:p-8  pr-0 pb-0 w-full md:w-2/6">
-							<div className="flex text-sm md:text-xl font-semibold text-primary">
-								<div className="mr-2 mt-1">
-									<BiCalendar />
-								</div>
+		<div className="max-w-screen-lg mx-auto p-5">
+			<div className="grid gap-6">
+				{experienceData.map((experience, index) => (
+					<Card key={index} className="w-full border rounded-md">
+						<CardHeader>
+							<CardTitle>{experience.position}</CardTitle>
+							<CardDescription>
+								<strong>{experience.employer}</strong> –{" "}
 								{experience.date}
-							</div>
-						</div>
-						<div className="card-body w-full md:w-4/6">
-							<h2 className="text-xl font-semibold">
-								{experience.position}
-							</h2>
-							<p className="text-base-content/60">
-								<strong className="text-lg border-base-content/20 border-b-2">
-									{experience.employer}
-								</strong>
-							</p>
-							<p className="text-base-content/60">
-								{experience.description}
-							</p>
-							<div className="mt-2 gap-2 flex flex-wrap">
-								{experience.skills.map((skill, skillIndex) => (
-									<a
+							</CardDescription>
+						</CardHeader>
+						<CardContent>
+							<p>{experience.description}</p>
+						</CardContent>
+						<CardFooter className="gap-2">
+							{experience.skills.map((skill, skillIndex) => (
+								<Link href={skill.link} target="_blank">
+									<Button
 										key={skillIndex}
-										href={skill.link}
-										target="_blank"
-										className="btn btn-xs w-fit btn-secondary capitalize"
+										className="btn-secondary capitalize"
+										size="sm"
 									>
 										{skill.name}
-									</a>
-								))}
-							</div>
-						</div>
-					</div>
-				</div>
-			))}
-		</>
+									</Button>
+								</Link>
+							))}
+						</CardFooter>
+					</Card>
+				))}
+			</div>
+		</div>
 	);
 }
 
