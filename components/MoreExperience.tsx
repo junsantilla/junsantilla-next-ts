@@ -50,7 +50,7 @@ const moreExperienceData = [
 function MoreExperience() {
 	return (
 		<div className="max-w-screen-lg mx-auto p-5">
-			<div className="grid gap-6">
+			<div className="flex flex-col w-full gap-6">
 				{moreExperienceData.map((experience, index) => (
 					<Card key={index} className="w-full border rounded-md">
 						<CardHeader>
@@ -74,19 +74,19 @@ function MoreExperience() {
 						<CardContent>
 							<p>{experience.description}</p>
 						</CardContent>
-						<CardFooter className="gap-2">
+						<div className="p-6 pt-0">
 							{experience.skills.map((skill, skillIndex) => (
 								<Link href={skill.link} target="_blank">
 									<Button
 										key={skillIndex}
-										className="btn-secondary capitalize"
+										className="btn-secondary capitalize mr-1 mb-1"
 										size="sm"
 									>
 										{skill.name}
 									</Button>
 								</Link>
 							))}
-						</CardFooter>
+						</div>
 					</Card>
 				))}
 				<div className="flex justify-center gap-4 mt-4">
@@ -96,7 +96,7 @@ function MoreExperience() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							✨ More on Github
+							✨ Visit Github
 						</Link>
 					</Button>
 				</div>

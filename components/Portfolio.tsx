@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { FiLink } from "react-icons/fi";
 
 interface PortfolioItem {
 	title: string;
@@ -89,55 +90,67 @@ function Portfolio({ portfolioData }: PortfolioProps) {
 					<h1 className="flex justify-center text-2xl md:text-5xl font-extrabold mt-10 mb-7">
 						Portfolio
 					</h1>
-					{portfolioData.map((item, index) => (
-						<Card
-							key={index}
-							className="w-full border rounded-md background"
-						>
-							<CardHeader>
-								<CardTitle>
-									{/* <a
-										href={item.link}
+					<div className="max-w-screen-lg mx-auto p-5">
+						<div className="flex flex-col w-full gap-6">
+							{portfolioData.map((experience, index) => (
+								<Card
+									key={index}
+									className="w-full border rounded-md"
+								>
+									<CardHeader>
+										<CardTitle className="flex items-center">
+											{experience.title}
+											{experience.link && (
+												<Link
+													href={experience.link}
+													target="_blank"
+													className="ml-2"
+												>
+													<FiLink />
+												</Link>
+											)}
+										</CardTitle>
+										<CardDescription>
+											<strong>{experience.client}</strong>{" "}
+											– {experience.role}
+										</CardDescription>
+									</CardHeader>
+									<CardContent>
+										<p>{experience.description}</p>
+									</CardContent>
+									<div className="p-6 pt-0">
+										{experience.skills.map(
+											(skill, skillIndex) => (
+												<Link
+													href={skill.link}
+													target="_blank"
+												>
+													<Button
+														key={skillIndex}
+														className="btn-secondary capitalize mr-1 mb-1"
+														size="sm"
+													>
+														{skill.name}
+													</Button>
+												</Link>
+											)
+										)}
+									</div>
+								</Card>
+							))}
+							<div className="flex justify-center gap-4 mt-4">
+								<Button asChild variant="ghost">
+									<Link
+										href="https://github.com/junsantilla"
 										target="_blank"
 										rel="noopener noreferrer"
-										className="text-lg font-semibold hover:underline"
 									>
-										{item.title}
-									</a> */}
-									{item.title}
-								</CardTitle>
-								<CardDescription>
-									<strong>{item.client}</strong>
-								</CardDescription>
-							</CardHeader>
-
-							<CardContent>
-								<p>{item.description}</p>
-								{/* <img
-									src={item.image}
-									alt={item.title}
-									className="w-full h-auto mt-4 rounded-lg object-cover"
-								/> */}
-							</CardContent>
-
-							<CardFooter className="gap-2 mt-4">
-								{item.skills.map((skill, skillIndex) => (
-									<Link
-										href={skill.link}
-										target="_blank"
-										key={skillIndex}
-									>
-										<Button
-											className="btn-secondary capitalize"
-											size="sm"
-										>
-											{skill.name}
-										</Button>
+										✨ More on Github
 									</Link>
-								))}
-							</CardFooter>
-						</Card>
-					))}
+								</Button>
+							</div>
+						</div>
+					</div>
 				</div>
 			)}
 		</div>
