@@ -86,8 +86,8 @@ function Portfolio({ portfolioData }: PortfolioProps) {
 					</form>
 				</div>
 			) : (
-				<div className="p-10 flex flex-col gap-10 mb-20">
-					<h1 className="flex justify-center text-2xl md:text-5xl font-extrabold mt-10 mb-7">
+				<div className="flex flex-col mb-20">
+					<h1 className="flex justify-center text-2xl md:text-5xl font-extrabold mt-14 mb-7">
 						Portfolio
 					</h1>
 					<div className="max-w-screen-lg mx-auto p-5">
