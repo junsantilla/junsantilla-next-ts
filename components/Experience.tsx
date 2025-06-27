@@ -13,7 +13,7 @@ import Link from "next/link";
 const experienceData = [
 	{
 		date: "February 2025 - May 2025",
-		position: "Frontend Developer",
+		position: "Frontend Developer (Freelance)",
 		employer: "IPS Cambodia (Independent Property Services)",
 		description:
 			"Rebuilt the frontend of their website with Next.js, while continuing to use headless WordPress as the content management system.",
