@@ -13,6 +13,35 @@ import { FiLink } from "react-icons/fi";
 
 const moreExperienceData = [
 	{
+		title: "Autoshare.Ph",
+		description:
+			"A web application for carpooling, connecting drivers and passengers to make commuting smarter, more affordable, and eco-friendly.",
+		client: "Personal Project",
+		role: "Web Developer",
+		skills: [
+			{ name: "React.js", link: "https://reactjs.org/" },
+			{ name: "Next.js", link: "https://nextjs.org/" },
+			{
+				name: "HTML",
+				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			},
+			{
+				name: "CSS",
+				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			},
+			{
+				name: "JavaScript",
+				link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+			},
+			{ name: "Tailwind", link: "https://tailwindcss.com/" },
+			{ name: "Firebase", link: "https://firebase.google.com/" },
+			{ name: "MongoDB", link: "https://www.mongodb.com/" },
+			{ name: "REST API", link: "https://restfulapi.net/" },
+		],
+		image: "/images/portfolio/screely-1698414532878.png",
+		link: "https://autoshare.ph/",
+	},
+	{
 		title: "Filetr.ee",
 		description:
 			"Open-source project that lists the folder and file structures of some of the most popular programming languages and frameworks.",
@@ -61,10 +90,6 @@ const moreExperienceData = [
 			},
 			{ name: "Tailwind", link: "https://tailwindcss.com/" },
 			{ name: "Firebase", link: "https://firebase.google.com/" },
-			{
-				name: "API",
-				link: "https://developer.mozilla.org/en-US/docs/Web/API",
-			},
 			{ name: "REST API", link: "https://restfulapi.net/" },
 			{ name: "OpenAI", link: "https://openai.com/" },
 		],
