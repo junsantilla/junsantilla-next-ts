@@ -13,6 +13,32 @@ import { FiLink } from "react-icons/fi";
 
 const moreExperienceData = [
 	{
+		title: "Filetr.ee",
+		description:
+			"Open-source project that lists the folder and file structures of some of the most popular programming languages and frameworks.",
+		client: "Personal Project",
+		role: "Web Developer",
+		skills: [
+			{ name: "React.js", link: "https://reactjs.org/" },
+			{ name: "Next.js", link: "https://nextjs.org/" },
+			{
+				name: "HTML",
+				link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			},
+			{
+				name: "CSS",
+				link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			},
+			{
+				name: "JavaScript",
+				link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+			},
+			{ name: "Tailwind", link: "https://tailwindcss.com/" },
+		],
+		image: "/images/portfolio/screely-1698414532878.png",
+		link: "https://filetr.ee/",
+	},
+	{
 		title: "Kravatar",
 		description:
 			"A web application that can generate unique avatars in seconds with our AI avatar generator. Perfect for gamers, streamers, and professionals looking to stand out online.",
